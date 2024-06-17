@@ -1,0 +1,53 @@
+.custom-jumbotron {
+    background-color: blue;
+    color: white;
+}
+
+.striped-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.striped-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+.striped-table th {
+    background-color: powderblue;
+    color: black;
+}
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+label.error{
+    color: red;
+}
+input.error, textarea.error{
+    border: 1px solid red;
+}
+input.valid, textarea.valid{
+    border: 1px solid green; 
+}
+#tabs {
+    margin-top: 20px;
+}
+#tabs .ui-tabs-panel {
+    padding: 10px;
+}
+#tabs .ui-tabs-panel table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#tabs .ui-tabs-panel th, #tabs .ui-tabs-panel td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}

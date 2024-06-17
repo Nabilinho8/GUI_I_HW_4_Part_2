@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- Nabil Barkallah
+    Nabil_Barkallah@student.uml.edu
+    5/2/2024
+    This file is the HTML structure and JavaScript code for the dynamic timestable generator application. -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Interactive Dynamic Times Table</title>
+    <!-- stylesheets-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+<!--jumbotron and title+description!-->
+<div class="jumbotron custom-jumbotron">
+    <div class="container">
+        <h1>Welcome to Nabil's Interactive Dynamic Times Table!</h1>
+        <p>This is an automated dynamic times table generator that will automatically make the times table of your dreams! Simply enter the minimum and maximum values for both the columns and rows of your choice and a table will be automatically generated! Press the "Save Table" button to save your table!</p>
+    </div>
+</div>
+
+<!--form for value entry-->
+<div class="container">
+    <form id="tableform" class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-md-4" for="rowmin">Row Minimum</label>
+            <div class="col-md-4">
+                <input type="number" class="form-control" id="rowmin" name="rowmin" placeholder="Enter a whole number between 0 and 100" required>
+                <div id="slider-rowmin"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4" for="rowmax">Row Maximum</label>
+            <div class="col-md-4">
+                <input type="number" class="form-control" id="rowmax" name="rowmax" placeholder="Enter a whole number between 0 and 100" required>
+                <div id="slider-rowmax"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4" for="colmin">Column Minimum</label>
+            <div class="col-md-4">
+                <input type="number" class="form-control" id="colmin" name="colmin" placeholder="Enter a whole number between 0 and 100" required>
+                <div id="slider-colmin"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4" for="colmax">Column Maximum</label>
+            <div class="col-md-4">
+                <input type="number" class="form-control" id="colmax" name="colmax" placeholder="Enter a whole number between 0 and 100" required>
+                <div id="slider-colmax"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="text-center">
+                <button id="savetable" type="button" class="btn btn-primary">Save Table</button>
+            </div>
+        </div>
+    </form>
+
+    <!--table container-->
+    <div class="table-container" id="table-container">
+    </div>
+    
+    <h1 class="text-center "><u>Your Saved Tables</u></h1>
+    <div id="tabs">
+        <div class="text-center">
+            <button id="close-selected" type="button" class="btn btn-primary">Close Selected Tables</button>
+        </div>
+        <ul>
+        </ul>
+    </div>
+</div>
+
+<!-- scripts -->
+
+<!-- jQuery library -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- jQuery UI library -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<!-- jQuery Validation Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+<script src="js/javascript.js"></script>
+</body>
+</html>
